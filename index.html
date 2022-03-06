@@ -1,0 +1,32 @@
+<!doctype "html">
+<html>
+  <head>
+    <title>Touch Me! - Touchez.js</title>
+    <script src="touchez.js"></script>
+    <style>
+div {
+  border: gray solid 2px;
+  height: 40%;
+  margin: 2em;
+}
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <script>
+// Pass elements into new Touchez object
+var tez = new Touchez(document.getElementsByTagName('div'))
+
+// Pass in a callback function to be executed on:
+// single tap / click
+tez.single(function (elem) {elem.style.backgroundColor = '#f00'});
+// double tap / click
+tez.double(function (elem) {elem.style.backgroundColor = '#0f0'});
+// touch and hold / click and hold
+tez.hold(function (elem) {elem.style.backgroundColor = '#00f'});
+
+// Callbacks can be named functions or anonymous (as in the above)
+    </script>
+  </body>
+</html>
