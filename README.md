@@ -7,11 +7,11 @@ Put this in the `<head>` of your page:
   <script src="touchez.js"></script>
 ```
 Set up your elements to recieve touch events:
-```html
+```javascript
 var tez = new Touchez(document.getElementsByTagName('div'))
 ```
 And finally, declare what should be done when tapped, double-tapped, or held:
-```html
+```javascript
 tez.single(function (elem) {elem.style.backgroundColor = '#f00'});
 tez.double(function (elem) {elem.style.backgroundColor = '#0f0'});
 tez.hold(function (elem) {elem.style.backgroundColor = '#00f'});
